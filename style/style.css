@@ -1,0 +1,318 @@
+/*VAR CSS*/
+:root{
+    --fm: 'Raleway', sans-serif;
+    --fm-roboto:'Roboto', sans-serif;
+    --fm-thin:100;
+    --fm-light:300;
+    --fm-regular:400;
+    --fm-bold:700;
+    --green-75:rgb(105,207,23,0.75);
+    --green-85:rgb(105,207,23,0.85);
+    --green:#69cf17;
+    --green-1:#4e9f0d;
+    --green-2:#62be19;
+    --white:#fff;
+    --white-g:#dedede;
+    --grey:#7a7a7a;
+    --dark:#060002;
+    --col-1:calc(100% / 12*1);
+    --col-2:calc(100% / 12*2);
+    --col-3:calc(100% / 12*3);
+    --col-4:calc(100% / 12*4);
+    --col-5:calc(100% / 12*5);
+    --col-6:calc(100% / 12*6);
+    --col-7:calc(100% / 12*7);
+    --col-8:calc(100% / 12*8);
+    --col-9:calc(100% / 12*9);
+    --col-10:calc(100% / 12*10);
+    --col-11:calc(100% / 12*11);
+    --col-12:calc(100% / 12*12);
+}
+/*CSS END*/
+*{
+    margin: 0%;
+    padding: 0;
+list-style: none;
+text-decoration: none;
+box-sizing: border-box;
+}
+body{
+    font-family: var(--fm);
+    background: var(--dark);
+}
+.container{
+    max-width:1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.col-4{
+    width: var(--col-4);
+    padding: 0 15px;
+}
+.col-12{
+    width: var(--col-12);
+    padding: 0 15px;
+}
+/*--justify--*/
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+/*--align-items--*/
+.align-item-center{
+    align-items: center;
+}
+.align-item-start{
+    align-items:flex-start;
+}
+
+/*--felx-direction--*/
+.flex-direction-column{
+    flex-direction: column;
+}
+
+/*--Header Start*/
+header{
+    width: 100%;
+    height: 770px;
+    background: url('../images/STREET_01.jpg') no-repeat center center / cover;
+}
+.logo{
+    background: var(--green-1);
+    border: 3px solid var(--green-2);
+    padding:11px 22px;
+    text-transform: uppercase;
+    border-radius:5px;
+    color:var(--white);
+    font-size:18px;
+    font-weight:var(--fm-regular);
+    line-height:17px;
+    box-shadow:inset 0 0 20px #48920c;
+}
+header nav ul li a{
+    color:var(--green);
+    padding:37px 26px 29px 26px;
+    font-size:20px;
+    font-weight:var(--fm-regular);
+    display: block;
+}
+header nav ul li .active{
+    padding: 37px 11px 29px 11px;
+    background: var(--green-75);
+    color:var(--white);
+    display: flex;
+}
+header nav ul li .active span{
+    width: 24px;
+    height: 24px;
+    background: var(--white);
+    color: var(--green);
+    display: block;
+    border-radius:50%;
+    text-align: center;
+    margin-left: 7px;
+}
+header h1{
+    color: var(--green);
+    text-transform:uppercase;
+    font-size:72px;
+    font-weight:var(--fm-regular);
+    margin-top:150px;
+}
+header p:first-of-type{
+    color: var(--green);
+    font-size:36px;
+    font-weight:var(--fm-regular);
+}
+header p:nth-of-type(2){
+    color: var(--white-g);
+    font-size:18px;
+    font-weight:var(--fm-regular);
+    margin:30px 0 75px;
+    line-height:25px;
+}
+/*Main*/
+main ul{
+    margin: 50px 0 70px !important;
+}
+main ul li{
+    margin-right:60px;
+}
+main ul li a{
+    color: var(--grey);
+    font-size:20px;
+    font-weight:var(--fm-regular);
+    transition:500ms;
+}
+main ul li a:hover,
+main ul li a.active{
+    color: var(--green);
+}
+main section .section_img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+main section .section_img img{
+    width: 100%;
+    height: 100%;
+}
+main section .section_img .price{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    transition: 500ms;
+}
+main section .section_img .price span{
+    color: var(--white);
+    padding: 20px 58px;
+    background: var(--green-75);
+    display: block;
+    font-size:24px;
+    font-weight:var(--fm-regular);
+}
+main section .section_img .btn{
+    width: 100%;
+    height: 100%;
+    background:var(--green-85);
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--white);
+    font-size: 24px;
+    font-weight:var(--fm-regular);
+    opacity: 0;
+    transition: 500ms;
+}
+main section .section_img:hover .btn{
+    opacity:1;
+}
+main section .section_img:hover .price{
+    opacity:0;
+}
+main section h2{
+ color:var(--green);
+ font-size:24px;
+ font-weight:var(--fm-regular);
+ text-transform: uppercase;
+ margin: 30px 0 15px;
+}
+main section p{
+    color: var(--white);
+    font-size:16px;
+    font-weight:var(--fm-regular);
+    margin-bottom:50px;
+    line-height: 24px;
+}
+/*Section*/
+.section{
+    width: 100%;
+    height: 560px;
+    background: url(../images/STREET_02.jpg) no-repeat center center/cover;
+}
+.section h2{
+    color: var(--green);
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: var(--fm-bold);
+    text-align: center;
+    margin: 45px 0;
+} 
+.section h2::after{
+    content: "";
+    display: block;
+    max-width: 200px;
+    height: 2px;
+    background: var(--green);
+    margin: 20px auto 0;
+}
+.section p{
+    color: var(--white);
+    font-size: 18px;
+    font-weight:var(--fm-regular);
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+/*MAP*/
+.map h2{
+    color:var(--green);
+    font-size: 36px;
+    font-weight: var(--fm-bold);
+    padding: 50px 0;
+    text-align: center;
+    text-transform: uppercase;
+    background: var(--white);
+}
+/*FOOTER*/
+footer{
+    padding: 40px 0 50px;
+}
+footer .footer_info{
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer_info .phone{
+    color:#4e9f0d;
+    font-size:24px;
+    font-weight:var(--fm-bold);
+    font-family: var(--fm-roboto);
+}
+footer .footer_nav{
+    margin: 50px 0 40px;
+}
+footer .footer_nav ul li{
+    margin:0 30px;
+}
+footer .footer_nav ul li a{
+    color: var(--white);
+    font-size:18px;
+    font-weight: var(--fm-regular);
+}
+footer p{
+    color: var(--white-g);
+    font-size:16px;
+    font-weight:var(--fm-thin);
+    text-align: center;
+}
+
+/*MEDIA*/
+@media(max-width:576){
+    .row{
+        margin: 0;
+    }
+    header_logo{
+        margin-top:20px;
+    }
+    .d-sm-none{
+        display: none;
+    }
+    header h1{
+        font-size:60px;
+    }
+    header .header_price{
+        padding: 15px 45px;
+    }
+    .col-sm-12{
+        width: var(--col-12);
+        padding:0 15px;
+    }
+    .section{
+        overflow: scroll;
+    }
+    .section p{
+        font-size: 16px;
+    }
+}
